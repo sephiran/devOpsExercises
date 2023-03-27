@@ -57,7 +57,7 @@ public class StringCalculatorTest {
     @Test()
     public void Test_Add_IgnoreNumbersGreaterThan1000MultipleInputs() {
         StringCalculator stringCalculator = new StringCalculator();
-        Assertions.assertEquals(30, stringCalculator.Add("1010,3,5,12"));
+        Assertions.assertEquals(20, stringCalculator.Add("1010,3,5,12"));
     }
 
     @Test()
