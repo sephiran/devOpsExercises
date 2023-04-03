@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class StringCalculatorTest {
-    
+
     @Test
     public void Test_Add_Numbers1And2() {
         StringCalculator stringCalculator = new StringCalculator();
@@ -41,10 +41,10 @@ public class StringCalculatorTest {
         Exception exception = Assertions.assertThrows(NumberFormatException.class, () -> {
             stringCalculator.Add("-15\n58");
         });
-    
+
         String expectedMessage = "No negative numbers allowed";
         String actualMessage = exception.getMessage();
-    
+
         Assertions.assertTrue(actualMessage.contains(expectedMessage));
     }
 
@@ -70,5 +70,17 @@ public class StringCalculatorTest {
     public void Test_Add_ReturnZeroWhenSingleInputNumberIsOver1000() {
         StringCalculator stringCalculator = new StringCalculator();
         Assertions.assertEquals(0, stringCalculator.Add("1003"));
+    }
+
+    @Test
+    public void Test_Add_NullInput() {
+        StringCalculator stringCalculator = new StringCalculator();
+        Assertions.assertEquals(0, stringCalculator.Add(null));
+    }
+
+    @Test
+    public void Test_Add_EmptyInput() {
+        StringCalculator stringCalculator = new StringCalculator();
+        Assertions.assertEquals(0, stringCalculator.Add(""));
     }
 }
