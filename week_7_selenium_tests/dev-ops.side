@@ -1,0 +1,315 @@
+{
+  "id": "e46d69a4-a662-477c-84b3-7bde4912cfb3",
+  "version": "2.0",
+  "name": "dev-ops",
+  "url": "https://www.digitec.ch",
+  "tests": [{
+    "id": "094e61b9-a5d2-4887-9177-4fa7e5f3a5e5",
+    "name": "1 - Produkt zu Warenkorb hinzufügen",
+    "commands": [{
+      "id": "e6dc8b5f-d555-4279-aed6-26b8033bcddf",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e132114-7ed8-4798-a27d-17e19ebad5d2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x944",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae41da9c-19b2-4329-ab45-f7631d188b7f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Audio",
+      "targets": [
+        ["linkText=Audio", "linkText"],
+        ["css=.sc-1o3hha4-0:nth-child(1) > .sc-1xxwfxa-0", "css:finder"],
+        ["xpath=//a[contains(text(),'Audio')]", "xpath:link"],
+        ["xpath=//div[@id='__next']/div/div[3]/div/div/div/nav/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/de/s1/tag/audio-591')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Audio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "62a092ed-2b92-4a9b-84b6-b413385fdee4",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Gesamtsortiment",
+      "targets": [
+        ["linkText=Gesamtsortiment", "linkText"],
+        ["css=.sc-jdnwia-0", "css:finder"],
+        ["xpath=//a[contains(text(),'Gesamtsortiment')]", "xpath:link"],
+        ["xpath=//div[@id='__next']/div/div[3]/div/div/div/nav/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/de')])[2]", "xpath:href"],
+        ["xpath=//div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Gesamtsortiment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e32f6b6-76ff-4e37-ae61-f8b0f6468857",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Gesamtsortiment",
+      "targets": [
+        ["linkText=Gesamtsortiment", "linkText"],
+        ["css=.sc-jdnwia-0", "css:finder"],
+        ["xpath=//a[contains(text(),'Gesamtsortiment')]", "xpath:link"],
+        ["xpath=//div[@id='__next']/div/div[3]/div/div/div/nav/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/de')])[2]", "xpath:href"],
+        ["xpath=//div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Gesamtsortiment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7050bd4-ecf7-464b-9f9a-863e3bb4cc28",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Audio Player",
+      "targets": [
+        ["linkText=Audio Player", "linkText"],
+        ["css=.sc-1o3hha4-0:nth-child(2) > .sc-1xxwfxa-0", "css:finder"],
+        ["xpath=//a[contains(text(),'Audio Player')]", "xpath:link"],
+        ["xpath=//div[@id='__next']/div/div[3]/div/div/div/nav/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/de/s1/tag/audio-player-1386?tagIds=591')]", "xpath:href"],
+        ["xpath=//nav/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Audio Player')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c8deba8-fa2a-42e1-89da-9279ae4dc81f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Audio Player",
+      "targets": [
+        ["linkText=Audio Player", "linkText"],
+        ["css=.khYTKl", "css:finder"],
+        ["xpath=(//a[contains(text(),'Audio Player')])[2]", "xpath:link"],
+        ["xpath=//div[@id='__next']/div/div[3]/div/div/div/nav/div/ul/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/de/s1/tag/audio-player-1386?tagIds=591')])[2]", "xpath:href"],
+        ["xpath=//ul/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82093fa4-8bf8-4163-a7ea-3f00e2fa9f6b",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Audio Player",
+      "targets": [
+        ["linkText=Audio Player", "linkText"],
+        ["css=.khYTKl", "css:finder"],
+        ["xpath=(//a[contains(text(),'Audio Player')])[2]", "xpath:link"],
+        ["xpath=//div[@id='__next']/div/div[3]/div/div/div/nav/div/ul/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/de/s1/tag/audio-player-1386?tagIds=591')])[2]", "xpath:href"],
+        ["xpath=//ul/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef2a9529-94dc-4e1d-b601-d828e60d7914",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,662)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d756dfff-d101-4826-84b9-1a40cd694259",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.sc-15xtbzo-1:nth-child(1) > .sc-15xtbzo-8.fmXmbO .sc-1l1ysqm-0.kauxfw",
+      "targets": [],
+      "value": "DMR115 mit DAB, DAB+ und Bluetooth"
+    }, {
+      "id": "caabe149-7a9b-442e-bf7f-e5ae4518837b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-15xtbzo-1:nth-child(1) .sc-1xfepqk-0:nth-child(3)",
+      "targets": [
+        ["css=.sc-15xtbzo-1:nth-child(1) .sc-1xfepqk-0:nth-child(3)", "css:finder"],
+        ["xpath=(//button[@type='button'])[25]", "xpath:attributes"],
+        ["xpath=//div[@id='productListingContainer']/div[4]/article/div[5]/div/div[2]/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9107f8b5-367d-42be-97fa-e23f249226ed",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Weiter zum Warenkorb",
+      "targets": [
+        ["linkText=Weiter zum Warenkorb", "linkText"],
+        ["css=.sc-16x324-9", "css:finder"],
+        ["xpath=//a[contains(text(),'Weiter zum Warenkorb')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/de/cart')]", "xpath:href"],
+        ["xpath=//header/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Weiter zum Warenkorb')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0f111e3a-bb7a-49e0-b792-ad8e07085b7e",
+    "name": "2 - Prüfen ob Produkt in Warenkorb",
+    "commands": [{
+      "id": "aa8c57ef-c3e3-4bd5-800d-1597aaa825b0",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3704f170-479b-4f86-93fb-0fb9303c0bd1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x944",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dda2dde5-989d-4143-b2ff-9d0f4e88dfb4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.zaPjN",
+      "targets": [
+        ["css=.zaPjN", "css:finder"],
+        ["xpath=//div[@id='usermenu']/div[4]/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc52f9de-d8f4-4908-acc7-85d546b2ec53",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.zaPjN",
+      "targets": [
+        ["css=.zaPjN", "css:finder"],
+        ["xpath=//div[@id='usermenu']/div[4]/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f3807fa-12e7-4866-8abd-674bd1f4cefe",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.zaPjN",
+      "targets": [
+        ["css=.zaPjN", "css:finder"],
+        ["xpath=//div[@id='usermenu']/div[4]/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa666cb4-c470-442b-9f0b-9f21adcd122a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Zum Warenkorb",
+      "targets": [
+        ["linkText=Zum Warenkorb", "linkText"],
+        ["css=.sc-4etakq-0", "css:finder"],
+        ["xpath=//a[contains(text(),'Zum Warenkorb')]", "xpath:link"],
+        ["xpath=//div[@id='usermenu-area']/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/de/cart')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Zum Warenkorb')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3024296c-b591-461e-b979-fde43911eb12",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.sc-4moecn-2 > .sc-1l1ysqm-0",
+      "targets": [
+        ["css=.sc-4moecn-2 > .sc-1l1ysqm-0", "css:finder"],
+        ["xpath=//main[@id='pageContent']/div[2]/section/ul/div/div/div/div/div/a/div/span", "xpath:idRelative"],
+        ["xpath=//a/div/span", "xpath:position"]
+      ],
+      "value": "DMR115 mit DAB, DAB+ und Bluetooth"
+    }]
+  }, {
+    "id": "4457146f-29ca-4ea1-b32e-028f3b0d8135",
+    "name": "3 - Produkt entfernen",
+    "commands": [{
+      "id": "8859f28c-5a56-4dba-b646-eae4b50a539b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "691b615d-85cb-4b8f-8326-d74c8e1e8add",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1512x944",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf8785ee-7cfe-4be9-9a2a-0cc9f0e7ef8b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.zaPjN",
+      "targets": [
+        ["css=.zaPjN", "css:finder"],
+        ["xpath=//div[@id='usermenu']/div[4]/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f65e91c-0040-4eb2-a697-846d361abf89",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-s92p6o-0",
+      "targets": [
+        ["css=.sc-s92p6o-0", "css:finder"],
+        ["xpath=(//button[@type='button'])[12]", "xpath:attributes"],
+        ["xpath=//div[@id='usermenu-area']/div[2]/div/ul/li/div/div/button", "xpath:idRelative"],
+        ["xpath=//li/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "78f200c3-a889-4e2d-8742-3f2ce80e09ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.liFNVH .sc-14p7t1m-0",
+      "targets": [
+        ["css=.liFNVH .sc-14p7t1m-0", "css:finder"],
+        ["xpath=//div[@id='usermenu']/div[4]/div/button/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "01d8e775-b39e-43a0-975e-510fd843eebb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-u240i3-0:nth-child(4) .sc-14p7t1m-0",
+      "targets": [
+        ["css=.sc-u240i3-0:nth-child(4) .sc-14p7t1m-0", "css:finder"],
+        ["xpath=//div[@id='usermenu']/div[4]/div/button/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b5c0766-dca6-4634-b15a-09c95c7921b4",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.sc-voxdam-0 > p",
+      "targets": [
+        ["css=.sc-voxdam-0 > p", "css:finder"],
+        ["xpath=//div[@id='usermenu-area']/div[2]/div/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Noch nichts passendes gefunden? Stöbere in unserem Gesamtsortiment oder ...')]", "xpath:innerText"]
+      ],
+      "value": "Noch nichts passendes gefunden? Stöbere in unserem Gesamtsortiment oder ..."
+    }]
+  }],
+  "suites": [{
+    "id": "de2d2357-9ce4-43b8-aac4-6669206c52aa",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.digitec.ch/"],
+  "plugins": []
+}
