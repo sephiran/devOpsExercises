@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js Text Input App</title>
+  <script>
+    async function loadTexts() {
+      const response = await fetch('/load-texts');
+      const texts = await response.json();
+      const list = document.getElementById('texts-list');
+      list.innerHTML = '';
+      texts.forEach(text => {
+        const listItem = document.createElement('li');
+        listItem.textContent = text.text;
+        list.appendChild(listItem);
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Node.js Text Input App</h1>
+  <form action="/submit-text" method="POST">
+    <label for="text-input">Text:</label>
+    <input type="text" id="text-input" name="text">
+    <button type="submit">Submit</button>
+  </form>
+  <button id="load-texts" onclick="loadTexts()">Alle Inhalte aus MongoDB laden</button>
+  <ul id="texts-list"></ul>
+</body>
+</html>
