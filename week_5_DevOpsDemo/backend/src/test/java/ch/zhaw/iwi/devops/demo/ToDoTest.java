@@ -13,5 +13,12 @@ class ToDoTest {
         assertEquals("description", toDo1.getDescription());
         assertEquals(1, toDo1.getId());
     }
+
+    @Test
+    void testGetResponsiblePerson() {
+        var testResponsiblePerson = "Responsible Person";
+        var toDo = new ToDo(0, "Title", "Description",testResponsiblePerson);
+        assertEquals(testResponsiblePerson, toDo.getResponsiblePerson());
+    }
     
 }
