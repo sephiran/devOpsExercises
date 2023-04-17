@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  nodejs:
+    build: .
+    container_name: my-nodejs-container
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo_container
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: adrian
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+      MONGO_INITDB_DATABASE: mydb
+    volumes:
+      - db-data:/data/db
+
+volumes:
+  db-data:  {}
