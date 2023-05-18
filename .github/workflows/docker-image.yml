@@ -29,5 +29,4 @@ jobs:
           context: ./week_14_DevOpsPath/
           file: ./week_14_DevOpsPath/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
-          labels: devopspath
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/devopspath:latest
