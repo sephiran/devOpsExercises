@@ -35,7 +35,6 @@ jobs:
           uses: azure/webapps-deploy@v2
           with:
             publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-            resource-group: ${{ secrets.AZURE_RESOURCE_GROUP }}
-            image: sephiran/devopspath:latest
-            registry-login-server: hub.docker.com
             name: sephiran-app-helloworld
+            image: https://registry.hub.docker.com/library/sephiran/devopspath:latest
+            
