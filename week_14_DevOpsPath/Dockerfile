@@ -1,15 +1,13 @@
 FROM openjdk:17-jdk-slim
-
 RUN apt-get update && apt-get install -y curl \
-&& curl -sL https://deb.nodesource.com/setup_14.x | bash - \
-&& apt-get install -y nodejs \
-&& curl -L https://www.npmjs.com/install.sh | sh
+  && curl -sL https://deb.nodesource.com/setup_18.x | bash - \
+  && apt-get install -y nodejs \
+  && curl -L https://www.npmjs.com/install.sh | npm_install="8.19.2" | sh
+  RUN apt-get update && apt-get install -y python3.10
 
 WORKDIR /usr/src/app
-COPY . .
 
-RUN cd backend && chmod +x gradlew
-RUN cd backend && ./gradlew build
+COPY . .
 
 RUN apt-get update
 RUN apt-get install python3
@@ -17,6 +15,11 @@ RUN export PYTHON=usr/bin/python3.10
 RUN apt-get -y install build-essential
 RUN cd frontend && npm install
 RUN cd frontend && npm run build
+RUN mv frontend/dist frontend/static
+RUN mv frontend/static backend/src/main/resources
+RUN rm -r frontend
+RUN cd backend && chmod +x gradlew
+RUN cd backend && ./gradlew build
 
-EXPOSE 4567
+EXPOSE 8080
 CMD ["java", "-jar", "/usr/src/app/backend/build/libs/demo-0.0.1-SNAPSHOT.jar"]
