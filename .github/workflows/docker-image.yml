@@ -38,6 +38,7 @@ jobs:
             app-name: sephiran-app-helloworld
             images: sephiran/devopspath:${{ github.run_number }}
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       -
