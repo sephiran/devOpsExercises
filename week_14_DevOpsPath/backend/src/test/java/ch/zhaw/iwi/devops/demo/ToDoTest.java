@@ -1,0 +1,24 @@
+package ch.zhaw.iwi.devops.demo;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+class ToDoTest {
+    
+    @Test
+    void testToDo() {
+        var toDo1 = new ToDo(1, "title", "description", "");
+        assertEquals("title", toDo1.getTitle());
+        assertEquals("description", toDo1.getDescription());
+        assertEquals(1, toDo1.getId());
+    }
+
+    @Test
+    void testGetResponsiblePerson() {
+        var testResponsiblePerson = "Responsible Person";
+        var toDo = new ToDo(0, "Title", "Description",testResponsiblePerson);
+        assertEquals(testResponsiblePerson, toDo.getResponsiblePerson());
+    }
+    
+}
