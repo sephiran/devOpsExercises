@@ -30,4 +30,4 @@ jobs:
           file: ./week_14_DevOpsPath/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
-          labels: devOpsPath
+          labels: devopspath
