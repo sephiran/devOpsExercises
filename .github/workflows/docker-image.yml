@@ -30,3 +30,12 @@ jobs:
           file: ./week_14_DevOpsPath/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/devopspath:latest
+      -
+          name: Login to Azure
+          uses: azure/webapps-deploy@v2
+          with:
+            publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+            resource-group: ${{ secrets.AZURE_RESOURCE_GROUP }}
+            image: sephiran/devopspath:latest
+            registry-login-server: hub.docker.com
+            name: sephiran-app-helloworld
