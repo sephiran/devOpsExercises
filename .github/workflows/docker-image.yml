@@ -27,6 +27,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: ./week_8_docker/
-          file: ./Dockerfile
+          file: ./week_8_docker/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
