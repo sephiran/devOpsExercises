@@ -29,12 +29,12 @@ jobs:
           context: ./week_14_DevOpsPath/
           file: ./week_14_DevOpsPath/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/devopspath:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/devopspath:${{ github.run_number }}
       -
           name: Login to Azure
           uses: azure/webapps-deploy@v2
           with:
             publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-            name: sephiran-app-helloworld
-            images: sephiran/devopspath:latest
+            app-name: sephiran-app-helloworld
+            images: sephiran/devopspath:${{ github.run_number }}
             
